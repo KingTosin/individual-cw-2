@@ -90,10 +90,6 @@
                         <option v-for="(state, key) in states" v-bind:value="state">
                            {{key}}
                         </option>
-                      <!-- <option>AL</option>
-                        <option>AR</option>
-                        <option>CA</option>
-                        <option>NV</option> -->
                     </select> 
                 </p>
                 <p><strong>Zip/Postal Code:</strong> <input v-model="order.zip"></p>
@@ -132,16 +128,6 @@
                 // the key 'sitename' matches the value of 'v-text' from earlier
                 sitename: 'Vue.js Pet Depot',
                 product: products ,
-                //{
-                  //  id: 1001,
-                    //title: "Dog Food, 5lb bag",
-                    //description: "A bag of <em>nourishing</em>, " + "organic goodness for your dog.",
-                    //price: 2000,
-                    //image: "C:/Users/hp pavilion/Documents/vueJs classwork/images/photo-1604544203292-0daa7f847478.jfif",
-                    //availableInventory: 5,
-                   // rating: 3
-                    
-                //},
                 states: {
                         AL: 'Alabama',
                         AR: 'Arizona',
@@ -191,11 +177,8 @@
             computed: { // the Computed Property object
                 cartItemCount() { // the propety name
                 // its value is calculated when it is called
-                    return this.cart ? this.cart.length: 0;
+                    return this.cart ? this.cart.length: 3;
                 },
-                //canAddtoCart: function () {
-                  //  return this.product.availableInventory > this.cartItemCount;
-                //},
                 sortedProducts() {
                     let productsArray = this.products.slice;
                     function compare(a,b) {
